@@ -1,3 +1,4 @@
+/* Global */
 body {
     margin-top: 80px;
 }
@@ -15,6 +16,14 @@ body {
     color: #333;
     background-color: #B1A8C1;
 }
+/* Global */
+/* Form */
+.img-captcha {
+    height: 50px;
+    width: auto;
+    margin: 10px;
+}
+/* Form */
 /* Sidebar */
 .form-search-sidebar {
     margin-top: -20px;
@@ -22,6 +31,8 @@ body {
 .margin-top-remove-40 {
     margin-top:-40px;
 }
+/* Sidebar */
+/* Mobile */
 @media only screen and (max-width: 768px) {
     body {
         margin-top: 160px;
@@ -98,3 +109,4 @@ body {
     0%   {left:-300px;}
     100% {left:0px;}
 }
+/* Mobile */
