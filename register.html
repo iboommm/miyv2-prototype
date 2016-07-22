@@ -26,7 +26,7 @@
     &#9776;
     </button>
     <span class="hidden-sm-up"> <b>Portal</b></span>
-   
+     
     <div class="collapse  navbar-toggleable-xs" id="exCollapsingNavbar2">
         <a class="navbar-brand" href="#">MIY  CMS</a>
         <ul class="nav navbar-nav">
@@ -44,7 +44,7 @@
     <div class="col-md-12">
        <ol class="breadcrumb hidden-xs-down">
           <li><span class="fa fa-home"></span> Home</li>
-          <li class="active"><span class="fa fa-lock"></span> Login</li>
+          <li class="active"><span class="fa fa-plus"></span> Register</li>
         </ol>
     </div>
     <div class="col-md-12">
@@ -53,18 +53,22 @@
         </div>
         <div class="col-md-6" id="content">
             <form action="" class="form-group jumbotron">
-               <h4>Login...</h4>
-                <label for="Username"><span class="fa fa-user"></span> Username or Email</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter Username or Email">
-                <label for="Username"><span class="fa fa-key"></span> Password</label>
+               <h4>Register ...</h4>
+                <label for="Username"><span class="fa fa-user"></span> Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                <label for="Email"><span class="fa fa-envelope"></span> Email</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Email">
+                <label for="Password"><span class="fa fa-key"></span> Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Enter Password">
-                <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Remember Me
-                </label>
-              </div>
+                <label for="RePassword"><span class="fa fa-key"></span> Password Again</label>
+                <input type="password" class="form-control" id="repassword" placeholder="Enter Password Again">
+                <label for="RePassword"><span class="fa fa-lock"></span> CAPTCHA</label>
+                <input type="password" class="form-control" id="repassword" placeholder="Enter CAPTCHA">
+                <p><img src="img/captcha.PNG" alt="" class="img-thumbnail img-captcha"></p>
+                <br>
                 <p>
-                    <button class="btn btn-primary"><span class="fa fa-lock"></span> Login</button>
+                    <button class="btn btn-primary"><span class="fa fa-plus"></span> Register </button>
+                    <button class="btn btn-danger"><span class="fa fa-arrow-left"></span> Back </button>
                 </p>
             </form>
         </div>
