@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminController">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-sanitize.js"></script>
+    <script type="text/javascript" src="js/angular-sanitize.js"></script>
+    <script type="text/javascript" src="js/angular-dragdrop.min.js"></script>
+
+    
+    <script type="text/javascript" type="text/javascript" src="js/adminController.js"></script>
+    
+    <style>
+      .thumbnail { min-height: 150px !important ; margin-left: -20px; }
+      .btn-droppable { width: 150px; height: 30px; padding-left: 4px;margin-left: -20px; }
+      .btn-draggable { width: 100%; }
+    </style>
+    
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerMenu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+         <a class="navbar-brand" href="#" ng-controller="brandLoader as txtDB" >
+             {{txtDB.data.name}}
+         </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="headerMenu">
+            <ul class="nav navbar-nav" ng-controller="txtHeader as txt">
+                <li><a href="#">{{txt.lang.home}}</a></li>
+                <li><a href="#">{{txt.lang.general}}</a></li>
+                <li><a href="#">{{txt.lang.member}}</a></li>
+                <li><a href="#">{{txt.lang.module}}</a></li>
+                <li><a href="#">{{txt.lang.plugin}}</a></li>
+                <li><a href="#">{{txt.lang.signout}}</a></li>
+            </ul>
+      
+         <div class="text-right" ng-controller="txtHeader as txt">
+            <h4>
+                 <button class="btn btn-danger"> {{txt.lang.signout}} </button>
+             </h4>
+         </div>
+        </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+               <ul class="list-group">
+                <a href="javascript:;;"><li class="list-group-item">Manage Module</li></a>
+                 <a href="javascript:;;"><li class="list-group-item">Add Module</li></a>
+                 <a href="javascript:;;"><li class="list-group-item">Edit Module</li></a>
+                 <a href="javascript:;;"><li class="list-group-item">Remove Module</li></a>
+                  </ul>
+            </div>
+            <div class="panel-footer">
+                <small>powered by @iboommm</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9" ng-controller="oneCtrl">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Manage Module</div>
+            <div class="panel-body">
+               <form action="javascript:;;">
+                   <div class="form-group">
+                       <div class="col-sm-9">
+                            <div class="panel panel-primary" >
+                                <div class="panel-heading">
+                                    Result
+                                </div>
+                                <div class="panel-body">
+                                    <div class='contentWrapper ng-cloak'>
+        <div class='content'>
+            <ul class="thumbnails" >
+              <div class=" col-md-12"  >
+                <div class="thumbnail"  data-drop="true" ng-model='list1' data-jqyoui-options="optionsList1" jqyoui-droppable="{multiple:true}">
+                  <div class="caption" >
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in list1" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-md-3" >
+                <div class="thumbnail" data-drop="true" ng-model='list2' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list2])'}"  jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in list2" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list2" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-md-6" >
+                <div class="thumbnail" data-drop="true" ng-model='list3' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list3])'}"  jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in list3" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list3" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-md-3" >
+                <div class="thumbnail" data-drop="true" ng-model='list4' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list4])'}"  jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in list4" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list4" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </div>
+               <div class=" col-md-12" >
+                <div class="thumbnail" data-drop="true" ng-model='list5' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list4])'}"  jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in list5" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list5" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+        </div>
+      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3" >
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    Module List
+                                </div>
+                                <div class="panel-body">
+                                     <div class="navbar-inner ">
+        <div class="container form-inline col-md-3" style="text-align: center;">
+          <div class="btn btn-droppable" ng-repeat="item in list0" data-drop="true" ng-model='list0' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list0])'}"  jqyoui-droppable="{index: {{$index}}}">
+            <div class="btn btn-info btn-draggable" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list0" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}" ng-hide="!item.title">{{item.title}}</div>
+          </div>
+          
+        </div>
+      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
