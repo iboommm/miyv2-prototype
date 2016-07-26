@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminController">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.js"></script>
+
+    
+    <script type="text/javascript" src="js/adminController.js"></script>
+    
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerMenu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+         <a class="navbar-brand" href="#" ng-controller="brandLoader as txtDB" >
+             {{txtDB.data.name}}
+         </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="headerMenu">
+            <ul class="nav navbar-nav" ng-controller="txtHeader as txt">
+                <li><a href="#">{{txt.lang.home}}</a></li>
+                <li><a href="#">{{txt.lang.general}}</a></li>
+                <li><a href="#">{{txt.lang.member}}</a></li>
+                <li><a href="#">{{txt.lang.module}}</a></li>
+                <li><a href="#">{{txt.lang.plugin}}</a></li>
+                <li><a href="#">{{txt.lang.signout}}</a></li>
+            </ul>
+      
+         <div class="text-right" ng-controller="txtHeader as txt">
+            <h4>
+                 <button class="btn btn-danger"> {{txt.lang.signout}} </button>
+             </h4>
+         </div>
+        </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+               <ul class="list-group">
+                <a href="javascript:;;"><li class="list-group-item">Member Search</li></a>
+                 <a href="javascript:;;"><li class="list-group-item">Add Member</li></a>
+                 <a href="javascript:;;"><li class="list-group-item">Edit Member</li></a>
+                 <a href="javascript:;;"><li class="list-group-item">Remove Member</li></a>
+                 <a href="javascript:;;"><li class="list-group-item">Ban Member</li></a>
+                  </ul>
+            </div>
+            <div class="panel-footer">
+                <small>powered by @iboommm</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Member Search</div>
+            <div class="panel-body">
+               <form action="javascript:;;">
+                   <div class="form-group">
+                        <label for="search-member">Search Member</label>
+                        <input ng-model="username" type="text" class="form-control">
+                    </div>
+                </form>
+                
+                <div class="col-md-12" ng-show="username != null && username != ''" ng-controller="memberSearch as a ">
+                    <table class="table">
+                        <tr>
+                            <td>#</td>
+                            <td>id</td>
+                            <td>username</td>
+                            <td>email</td>
+                            <td>Manage</td>
+                        </tr>
+                        <tr ng-repeat="m in a.member | filter : username ">
+                            <td><input type="checkbox"></td>
+                            <td>{{m.id}}</td>
+                            <td>{{m.username}}</td>
+                            <td>{{m.email}}</td>
+                            <td>
+                                <button class="btn btn-danger">Remove</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

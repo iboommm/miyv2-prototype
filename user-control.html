@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page of MiY prototype :3</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/miyv2.css">
+    
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript"src="js/tether.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mobile.js"></script>
+    <script>
+        
+    </script>
+</head>
+<body>
+ <nav class="navbar navbar-dark  bg-inverse navbar-full navbar-fixed-top" ng-controller="sidebar-xs">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+    &#9776;
+    </button>
+    <span class="hidden-sm-up"> <b>Portal</b></span>
+     <button class="navbar-toggler hidden-md-up pull-right" type="button" ng-click="sideRight()">
+    <span class="fa fa-arrow-circle-right"></span>
+    </button>
+    <button class="navbar-toggler hidden-md-up pull-right" type="button" ng-click="sideLeft()">
+    <span class="fa fa-arrow-circle-left" ></span>
+    </button>
+    <div class="collapse  navbar-toggleable-xs" id="exCollapsingNavbar2">
+        <a class="navbar-brand" href="index.html">MIY  CMS</a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html"><span class="fa fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html"><span class="fa fa-lock"></span> Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.html"><span class="fa fa-user"></span> Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="fa fa-github"></span> Contact US</a>
+            </li>
+        </ul>
+  </div>
+</nav>
+  
+<div class="container-fluid">
+    <div class="col-md-12">
+       <ol class="breadcrumb hidden-xs-down">
+          <li><a href="index.html"><span class="fa fa-home"></span> Home</li></a>
+          <li class="active"> Portal</li>
+        </ol>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-3" id="sideLeft">
+            <div class="card padding-5">
+                <div class="card-block ">
+                    <h5 class="card-title">User Control</h5>
+                </div>
+                 <div class="card-img-top hidden-sm-down padding-20 margin-top-remove-40">
+                     <img src="img/avatar.png" class="img-thumbnail avatar img-circle " alt="">
+                 </div>
+                  <ul class="list-group list-group-flush">
+                   <a href="javascript:;"><li class="list-group-item"><span class="fa fa-user"></span> User00</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-user"></span> Edit Profile</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-pencil"></span> Manage Blog</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-sign-out"></span> Log out</li></a>
+                  </ul>
+            </div>
+            <div class="card padding-5">
+                <div class="card-block">
+                    <h5 class="card-title">Banner</h5>
+                </div>
+                <div class="banner-template">
+                    Banner 1
+                </div>
+                <div class="banner-template">
+                    Banner 2
+                </div>
+                <div class="banner-template">
+                    Banner 2
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="content">
+            <div class="col-12">
+                <div class="card">
+                   <div class="card-block">
+                        <h3 class="card-title"> User Control </h3>
+                   </div>
+                   <div class="card-block">
+                       <label for="Name">Name</label>
+                       <input type="text" class="form-control">
+                   </div>                   
+                    <div class="card-block">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="col-md-3" id="sideRight">
+            <div class="card padding-5">
+                <div class="card-block ">
+                    <h5 class="card-title">Search</h5>
+                </div>
+                  <div class="card-block">
+                     <div class="form-search-sidebar form-group">
+                        <input type="text" class="form-control" placeholder="Enter here...">
+                       <button class="btn btn-primary-outline btn-block">Search</button>
+                      </div>
+                  </div>
+            </div>
+             <div class="card padding-5">
+                <div class="card-block ">
+                    <h5 class="card-title">Menu Control</h5>
+                </div>
+                  <ul class="list-group list-group-flush">
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-arrow-circle-right"></span> Page 1</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-arrow-circle-right"></span> Page 2</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-arrow-circle-right"></span> Page 3</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-arrow-circle-right"></span> Page 4</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-arrow-circle-right"></span> Page 5</li></a>
+                    <a href="javascript:;"><li class="list-group-item"><span class="fa fa-arrow-circle-right"></span> Page 6</li></a>
+                  </ul>
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+</body>
+</html>
